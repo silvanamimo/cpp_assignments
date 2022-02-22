@@ -60,16 +60,24 @@ void SmartPointer<T>::setValue(T value){
     *pointer = value;
 }
 
+
+template<typename T>
+inline
+T& SmartPointer<T>::operator*(){
+    return *pointer;
+}
+
+template<typename T>
+inline
+T* SmartPointer<T>::operator->(){
+    return pointer;
+}
+
 /*
 SmartPointer(SmartPointer &&) noexcept;
 
 SmartPointer &operator=(SmartPointer &&) noexcept;
 
-    auto getValue();
+*/
 
-    int use_count();
-
-use_count();
-
-set(T elem); */
-
+    

@@ -20,9 +20,9 @@ class SmartPointer {
 
     SmartPointer &operator=(SmartPointer &&) noexcept;
 
-    auto operator*();
+    T& operator*();
 
-    auto operator->();
+    T* operator->();
 
     auto getValue();
 
